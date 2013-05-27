@@ -1,4 +1,4 @@
-zen-fighter
-===========
+elevator-sim
+============
 
-Entry into Ludum Dare 26 &amp; April onegameamonth 
+Learn programming concepts with the classic algorithmic experiment of an Elevator Simulator
