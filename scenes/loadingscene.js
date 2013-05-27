@@ -45,12 +45,14 @@ var LoadingScene = function(game, canv)
 
   this.tick = function()
   {
-    if(progress <= imagesloaded/numimages)
-      progress += 0.01;
-    canv.context.fillStyle = "#000000";
+    if(progress <= imagesloaded/numimages) progress += 0.01;
+    if(progress >= 1.0) game.nextScene();
+  };
+
+  this.draw = function()
+  {
     canv.context.fillRect(pad,canv.canvas.height/2,progress*barw,1);
     canv.context.strokeRect(pad-1,(canv.canvas.height/2)-1,barw+2,3);
-    if(progress >= 1.0) game.nextScene();
   };
 
   this.cleanup = function()
@@ -58,5 +60,7 @@ var LoadingScene = function(game, canv)
     progress = 0;
     imagesloaded = 0;
     images = [];//just used them to cache assets in browser; let garbage collector handle 'em.
+    canv.context.fillStyle = "#FFFFFF";
+    canv.context.fillRect(0,0,canv.canvas.width,canv.canvas.height);
   };
 };

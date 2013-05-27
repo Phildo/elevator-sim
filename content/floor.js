@@ -1,0 +1,3 @@
+var Floor = function(level)
+{
+};

@@ -10,6 +10,11 @@ var NullScene = function(game, canv)
 
   };
 
+  this.draw = function()
+  {
+
+  };
+
   this.cleanup = function()
   {
 
