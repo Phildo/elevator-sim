@@ -1,9 +1,12 @@
 var GamePlayScene = function(game, canv)
 {
-  var building = new Building();
+  var building;
+  var person;
 
   this.ready = function()
   {
+    building = new Building(9);
+    person = new Person();
   };
 
   this.tick = function()
@@ -18,6 +21,9 @@ var GamePlayScene = function(game, canv)
     canv.context.moveTo(0,canv.canvas.height-20);
     canv.context.lineTo(canv.canvas.width,canv.canvas.height-20);
     canv.context.stroke();
+
+    building.draw(canv);
+    person.draw(canv,70,canv.canvas.height-37);
   };
 
   this.cleanup = function()

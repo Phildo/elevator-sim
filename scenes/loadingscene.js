@@ -4,7 +4,7 @@ var LoadingScene = function(game, canv)
   var barw;
   var progress;
 
-  var numimages = 14;
+  var numimages = 16;
   var imagesloaded = 0;
   var images = [];
 
@@ -27,20 +27,22 @@ var LoadingScene = function(game, canv)
       images[i] = new Image();
       images[i].onload = imageLoaded; 
     }
-    images[0].src = "assets/eman.png";
-    images[1].src = "assets/ethought.png";
-    images[2].src = "assets/thought1.png";
-    images[3].src = "assets/thought2.png";
-    images[4].src = "assets/thought3.png";
-    images[5].src = "assets/thought4.png";
-    images[6].src = "assets/thought5.png";
-    images[7].src = "assets/thought6.png";
-    images[8].src = "assets/thought7.png";
-    images[9].src = "assets/thought8.png";
-    images[10].src = "assets/thought9.png";
-    images[11].src = "assets/thoughtangry.png";
-    images[12].src = "assets/thoughtfine.png";
-    images[13].src = "assets/thoughthappy.png";
+    images[0].src = "assets/man.png";
+    images[1].src = "assets/bubble.png";
+    images[2].src = "assets/button.png";
+    images[3].src = "assets/litbutton.png";
+    images[4].src = "assets/1.png";
+    images[5].src = "assets/2.png";
+    images[6].src = "assets/3.png";
+    images[7].src = "assets/4.png";
+    images[8].src = "assets/5.png";
+    images[9].src = "assets/6.png";
+    images[10].src = "assets/7.png";
+    images[11].src = "assets/8.png";
+    images[12].src = "assets/9.png";
+    images[13].src = "assets/angry.png";
+    images[14].src = "assets/fine.png";
+    images[15].src = "assets/happy.png";
   };
 
   this.tick = function()
