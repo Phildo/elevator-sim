@@ -6,6 +6,11 @@ var Person = function()
   this.thought = new Image();
   this.thought.src = "assets/bubble.png";
 
+  this.tick = function()
+  {
+
+  };
+
   this.draw = function(canv, offsetx, offsety)
   {
     canv.context.drawImage(this.icon, offsetx, offsety);

@@ -14,5 +14,11 @@ var Stage = function()
     this.drawCanv.blitTo(this.dispCanv);
   };
 
+  this.clear = function()
+  {
+    this.drawCanv.clear();
+    this.dispCanv.clear();
+  };
+
   document.getElementById("stage_container").insertBefore(this.dispCanv.canvas, document.getElementById("shadow"));
 };

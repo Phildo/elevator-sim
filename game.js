@@ -13,6 +13,7 @@ var Game = function()
   var tick = function()
   {
     requestAnimFrame(tick,stage.dispCanv.canvas);
+    stage.clear();
     scenes[currentScene].tick();
     scenes[currentScene].draw();
     stage.draw(); //blits from offscreen canvas to on screen one

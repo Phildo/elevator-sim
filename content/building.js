@@ -7,7 +7,12 @@ var Building = function(numfloors)
     this.floors[i] = new Floor(i);
     this.buttons[i] = new Button(i);
   }
-  this.elevator = new Elevator(self);
+  this.elevator = new Elevator(this);
+
+  this.tick = function()
+  {
+    this.elevator.tick();
+  };
 
   this.draw = function(canv)
   {

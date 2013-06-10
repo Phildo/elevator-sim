@@ -7,10 +7,30 @@ var GamePlayScene = function(game, canv)
   {
     building = new Building(9);
     person = new Person();
+    var i = new Instruction();
+    i.floor = building.floors[5];
+    building.elevator.activityQ.add(i);
+    i = new Instruction();
+    i.floor = building.floors[1];
+    building.elevator.activityQ.add(i);
+    i = new Instruction();
+    i.floor = building.floors[9];
+    building.elevator.activityQ.add(i);
+    i = new Instruction();
+    i.floor = building.floors[2];
+    building.elevator.activityQ.add(i);
+    i = new Instruction();
+    i.floor = building.floors[1];
+    building.elevator.activityQ.add(i);
+    i = new Instruction();
+    i.floor = building.floors[5];
+    building.elevator.activityQ.add(i);
   };
 
   this.tick = function()
   {
+    building.tick();
+    person.tick();
   };
 
   this.draw = function()
